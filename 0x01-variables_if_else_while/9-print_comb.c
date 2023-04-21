@@ -13,7 +13,7 @@ int main(void)
 		putchar(num);
 		if (num == '9')
 		{
-			end;
+			break;
 		}
 		else
 		{
