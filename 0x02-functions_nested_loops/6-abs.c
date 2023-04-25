@@ -7,7 +7,7 @@
 int _abs(int k)
 {
 	if (t >= 0)
-		return (t);
+		return (k);
 	else
-		return (-t);
+		return (-k);
 }
