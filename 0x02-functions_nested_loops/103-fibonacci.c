@@ -17,7 +17,7 @@ int main(void)
 		sum = n1 + n2;
 		n1 = n2;
 		n2 = sum;
-		if ((n1 % 2) == 0)
+		if (n1 % 2 == 0)
 		{
 			evt += n1;
 		}
