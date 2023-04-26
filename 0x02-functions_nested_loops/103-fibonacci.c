@@ -15,9 +15,9 @@ int main(void)
 	while (sum <= 4000000)
 	{
 		sum = n1 + n2;
-		n1 = n2;
-		n2 = sum;
-		if (n1 % 2 == 0)
+		n1 += n2;
+		sum += n2;
+		if ((n1 % 2) == 0)
 		{
 			evt += n1;
 		}
