@@ -6,11 +6,11 @@
  */
 int main(void)
 {
-	long int n1, n2, sum, evt;
+	long int n1, n2, sum;
 
 	n1 = 1;
 	n2 = 2;
-	sum = evt = 0;
+	sum = 0;
 
 	while (sum <= 4000000)
 	{
@@ -19,7 +19,7 @@ int main(void)
 		sum += n2;
 		if ((n1 % 2) == 0)
 		{
-			evt += n1;
+			sum += n1;
 		}
 	}
 	printf("%ld\n", sum);
