@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_times_table - A function that prints n times table starting with 0
+ * print_times_table -  prints n times table starting with 0
  * @n: the number of times table (0 < n <= 15)
  * Return: 0
  */
