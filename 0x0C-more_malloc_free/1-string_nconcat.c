@@ -5,42 +5,42 @@
  * @s1: string 1
  * @s2: string 2
  * @n: number of bytes
- * Return: pointer to the allocated memory, if it fails, return null.
+ * Return: pointer to the allocated memory.
+ * if malloc fails, status value is equal to null
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *conc;
-	unsigned int ks1, ks2, kconc, i;
+	char *sout;
+	unsigned int ls1, ls2, lsout, i;
 
 	if (s1 == NULL)
-		s1 = " ";
+		s1 = "";
 
 	if (s2 == NULL)
-		s2 = " ";
+		s2 = "";
 
-	for (ks1 = 0; s1[ks1] != '\0'; ks1++)
+	for (ls1 = 0; s1[ls1] != '\0'; ls1++)
 		;
 
-	for (ks2 = 0; s2[ks2] != '\0'; ks2++)
+	for (ls2 = 0; s2[ls2] != '\0'; ls2++)
 		;
 
-	if (n > ks2)
-		n = ks2;
+	if (n > ls2)
+		n = ls2;
 
-	kconc = ks1 + n;
+	lsout = ls1 + n;
 
-	conc = malloc(kconc - 1);
+	sout = malloc(lsout + 1);
 
-	if (conc == NULL)
+	if (sout == NULL)
 		return (NULL);
 
-	for (i = 0; i < kconc; i++)
-		if (i < ks1)
-			conc[i] = s1[i];
-		else
-			conc[i] = s2[i - ks1];
+	for (i = 0; i < lsout; i++)
+		if (i < ls1)
+			sout[i] = s1[i];
+	else
+		sout[i] = s2[i - ls1];
 
-	conc[i] = '\0';
-
-	return (conc);
+	sout[i] = '\0';
+	return (sout);
 }
